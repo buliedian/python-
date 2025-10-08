@@ -10,12 +10,17 @@ for roll_num in range(5000):
     results.append(result)
 print(results)
 #分析结果
-frequencies=[]
+
+
 max_result=die_1.num_sides+die_2.num_sides
+"""
 for value in range(1,max_result+1):
     frequency=results.count(value)
     frequencies.append(frequency)
 print(frequencies)
+"""
+frequencies=[for value in range(1,max_result+1)
+
 #结果可视化
 x_values=list(range(2,max_result+1))
 data=[Bar(x=x_values,y=frequencies)]
@@ -24,3 +29,5 @@ y_axis_config={'title':'结果的频率'}
 my_layout=Layout(title="关于一次D6和一次D10的5000次的结果",
 xaxis=x_axis_config,yaxis=y_axis_config)
 offline.plot({'data':data,'layout':my_layout},filename='d6.html')
+
+
